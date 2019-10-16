@@ -7,7 +7,7 @@
       bob:
         name:  Bob
         telephone: 0607070606
-     type:
+    type:
       service:
         name: apache
         rpm: httpd
