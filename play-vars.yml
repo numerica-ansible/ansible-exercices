@@ -1,6 +1,4 @@
-- hosts: ansiblecli
-  remote_user: ansible
-  become: true
+- hosts: alpine
   tasks:
     - name: afficher les variables globales
       debug:
