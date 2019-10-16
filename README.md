@@ -15,8 +15,13 @@ service:
   rpm: httpd
 ```
 Etudier les scripts    
- play-variables.yml  
- play-variables-dict.yml  
+play-variables.yml  
+play-variables-in-file.yml
+play-variables-dict.yml  
+play-variables-dict-dimensions.yml
 et play-variables-surcharge  
 et passer le parametres extra-vars  
 ```ansible-playbook -i ../inventory_children --extra-vars "type=db" play-variables-surcharge.yml```
+play-exclude-kernel.yml
+play-install-conditions.yml
+play-handler-notify.yml
