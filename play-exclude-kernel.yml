@@ -1,4 +1,4 @@
-- hosts: centos_remote_a
+- hosts: all
   become: true
   tasks:
   - name: upgrade all packages, excluding kernel
