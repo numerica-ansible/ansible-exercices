@@ -18,7 +18,7 @@
   tasks:
     - name: user phone avec access directement au dictionnaire
       debug:
-        msg: "Le logiciel {{ service[users]['name'] }} sera installé par le paquet {{ [type].rpm }}"
+        msg: "Le logiciel {{ service[type]['name'] }} sera installé par le paquet {{ [type].rpm }}"
 
     - name: user et phone number avec lookup fonction
       debug:
