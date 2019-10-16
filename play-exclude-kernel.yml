@@ -1,7 +1,7 @@
-- hosts: ansiblesrv
+- hosts: centos_remote_a
   become: true
   tasks:
-  - name: upgrade all packages, excluding kernel & foo related packages
+  - name: upgrade all packages, excluding kernel
     yum:
       name: '*'
       state: latest
