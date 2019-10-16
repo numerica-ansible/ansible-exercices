@@ -1,0 +1,7 @@
+- hosts: target2
+  vars:
+    port_http: 8080
+  tasks:
+    - name: afficher les variables locales
+      debug:
+        msg: "Le port {{ port_http }} sera utilisé"
