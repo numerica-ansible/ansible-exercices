@@ -1,14 +1,14 @@
 - hosts: target2
   vars:
     port_http: 8080
-    type: web
-    service:
-      web:
-        name: apache
-        rpm: httpd
-      db:
-        name: mariadb
-        rpm: mariadb-server
+    type:
+      service:
+        web:
+          name: apache
+          rpm: httpd
+        db:
+          name: mariadb
+          rpm: mariadb-server
    tasks:
     - name: afficher un dictionnaire
       debug:
