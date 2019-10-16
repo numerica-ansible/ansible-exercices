@@ -1,0 +1,24 @@
+- hosts: centos_remote_a
+  become: true
+  tasks:
+  - name: install httpd
+    yum:
+      name: httpd
+      state: latest
+  - name: demarre httpd
+    service:
+      name: httpd
+      state: started
+  - name: modifie le serveradmin
+    lineinfile:
+      path: /etc/httpd/conf/httpd.conf
+      regexp: '^ServerAdmin'
+      line: 'ServerAdmin dockerlite@gmail.com'
+    notify:
+      - redemarre httpd
+
+  handlers:
+    - name: redemarre httpd
+      service:
+        name: httpd
+        state: restarted
