@@ -7,3 +7,10 @@ Pour trouver la variable
 
 Creer une variable locale nommee port_http contenant la valeur 8080. Utiliser cette variable
 dans un message
+
+Créer une variable nommée service de type dictionnaire avec comme :
+```yaml
+service:
+  name: apache
+  rpm: httpd
+```

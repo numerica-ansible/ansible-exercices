@@ -4,4 +4,4 @@
   tasks:
     - name: afficher les variables locales
       debug:
-        msg: "Le port {{ port_http }} sera utilisé"
+        msg: "Le port {{ port_http }} sera utilise"
