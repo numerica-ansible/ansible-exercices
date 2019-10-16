@@ -1,0 +1,10 @@
+---
+port_http: 8080
+type: web
+service:
+  web:
+    name: apache
+    rpm: httpd
+  db:
+    name: mariadb
+    rpm: mariadb-server

@@ -7,7 +7,7 @@
       bob:
         name:  Bob
         telephone: 0607070606
-        
+
   tasks:
     - name: user et phone number avec lookup fonction
       debug:

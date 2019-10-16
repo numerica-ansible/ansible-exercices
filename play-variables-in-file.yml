@@ -1,0 +1,8 @@
+- hosts: target2
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: installation du logiciel
+      debug:
+        msg: "Le logiciel {{ service[type]['name'] }} sera installé par le paquet {{
+service[type].rpm }}"
