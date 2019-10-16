@@ -1,15 +1,14 @@
 - hosts: target2
   vars:
-    port_http: 8080
-    type:
-      service:
-        web:
-          name: apache
-          rpm: httpd
-        db:
-          name: mariadb
-          rpm: mariadb-server
-   tasks:
-    - name: afficher un dictionnaire
+    users:
+      alice:
+        name: Alice Appleworth
+        telephone: 123-456-7890
+      bob:
+        name: Bob Bananarama
+        telephone: 987-654-3210
+  tasks:
+    - name: Print phone records
       debug:
-        msg: "Le logiciel {{ service[type]['name'] }} sera installé par le paquet {{ service[type].rpm }}"
+        msg: "User {{ item.key }} is {{ item.value.name }} ({{ item.value.telephone }})"
+      loop: "{{ lookup('dict', users) }}"
