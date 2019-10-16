@@ -7,19 +7,8 @@
       bob:
         name:  Bob
         telephone: 0607070606
-    type:
-      service:
-        name: apache
-        rpm: httpd
-      db:
-        name: mariadb
-        rpm: mariadb-server
-
+        
   tasks:
-    - name: user phone avec access directement au dictionnaire
-      debug:
-        msg: "Le logiciel {{ service[type]['name'] }} sera installé par le paquet {{ [type].rpm }}"
-
     - name: user et phone number avec lookup fonction
       debug:
         msg: "User {{ item.key }} is {{ item.value.name }} ({{ item.value.telephone }})"
