@@ -1,0 +1,17 @@
+- hosts: target2
+  become: true
+  vars_files:
+    - vars.yml
+  tasks:
+  - name: installer le service de bdd
+    yum:
+      name: "{{ service['db']['rpm'] }}"
+      state: latest
+    when: (type == "db" and ansible_distribution == "CentOS")
+  - name: installer le service web
+    yum:
+      name: "{{ service['web']['rpm'] }}"
+      state: latest
+    when:
+      - type == "web"
+      - ansible_distribution == "CentOS"
