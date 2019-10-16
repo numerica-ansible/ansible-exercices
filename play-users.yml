@@ -1,0 +1,14 @@
+- hosts: target2
+  become: true
+  vars:
+    users:
+      - paul
+      - sam
+      - bob
+  tasks:
+    - name: creer les utilisateurs
+      user:
+        name: "{{ item }}"
+        group: "users"
+        state: "present"
+      with_items: "{{ users }}"
