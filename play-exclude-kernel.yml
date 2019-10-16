@@ -6,3 +6,4 @@
       name: '*'
       state: latest
       exclude: kernel*
+    when:  ansible_distribution == 'CentOS'
